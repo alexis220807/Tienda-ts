@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Productos</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+padding: 20px;
+background-color: #f7f7f7;
+}
+h1 {
+text-align: center;
+}
+.categoria {
+margin-top: 30px;
+}
+.producto {
+background-color: white;
+border: 1px solid #ccc;
+border-radius: 8px;
+padding: 15px;
+margin-bottom: 15px;
+}
+.producto h3 {
+margin: 0 0 5px 0;
+    }
+.precio {
+color: green;
+font-weight: bold;
+}
+.comprar {
+background-color: #00ff73;
+color: rgb(0, 0, 0);
+padding: 6px 12px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+margin-top: 10px;
+}
+header {
+background-color: #00ff73;
+color: rgb(0, 0, 0);
+padding: 15px;
+text-align: center;
+}
+a {
+color: white;
+}
+</style>
+</head>
+<body>
+<div>  
+<header>
+<h1>Productos</h1>
+<a href="index.html">Pagina Principal</a>
+<a href="Paginalibre.html">Noticias</a>
+</header>
+</div>     
+<div class="categoria">
+    
+<h2>Tachos</h2>
+<div class="producto">
+<h3>Tenis Nike Air</h3>
+<img src="Img/Blanco y azul.jpg" width="400" height="260">
+<p class="precio">$2,000.00</p>
+<button class="comprar">Comprar</button>
+</div> 
+<div class="producto">
+<h3>Tenis Nike</h3>
+<img src="Img/Blanco y negro.jpg"  width="400" height="260">
+<p class="precio">$1,500.00</p>
+<button class="comprar">Comprar</button>
+</div>
+</div>
+<div class="producto">
+<h3>Puma Anzarun Lite Bold</h3>
+<img src="Img/Pumas rosas.jpg"  width="400" height="260">
+<p class="precio">$1,200.00</p>
+<button class="comprar">Comprar</button>
+</div>
+</div>
+<div class="producto">
+<h3>Pirma</h3>
+<img src="Img/Pirma rosa.jpg" width="400" height="260">
+<p class="precio">$1,200.00</p>
+<button class="comprar">Comprar</button>
+</div>
+</div>
+<div class="categoria">
+<h2>Uniformes de futbol</h2>
+<div class="producto">
+<h3>Chelsea</h3>
+<img src="Img/Chelsea.webp" width="400" height="260">
+<p class="precio">$1,800.00</p>
+<button class="comprar">Comprar</button>
+</div>
+<h3>Real Madrid</h3>
+<img src="Img/Real madrid.webp" width="400" height="260">
+<p class="precio">&2,000.00</p>
+<button class="comprar">Comprar</button>
+</div>
+<h3>Barca</h3>
+<img src="Img/Barca.webp" width="400" height="260">
+<p class="precio">$1,800.00</p>
+<button class="comprar">Comprar</button>
+</div>
+<h3>Chivas</h3>
+<img src="Img/Chivas.webp" width="400" height="260">
+<p class="precio">$1,600.00</p>
+<button class="comprar">Comprar</button>
+</div>
+<h3>Liverpool</h3>
+<img src="Img/Liverpool.webp" width="400" height="260">
+<p class="precio">&1,800.00</p>
+<button class="comprar">Comprar</button>
+</div>
+<h3>Rivers</h3>
+<img src="Img/Rivers.webp" width="400" height="260">
+<p class="precio">$1,600.00</p>
+<button class="comprar">Comprar</button>
+</div>
+<h3>Espinilleras Adidas</h3>
+<img src="Img/Espinilleras adidas.webp" width="400" height="260">
+<p class="precio">$500.00</p>
+<button class="comprar">Comprar</button>
+</div>
+<h3>Espinilleras Nike</h3>
+<img src="Img/Espinilleras blancas Nike.webp" width="400" height="260">
+<p class="precio">$450.00</p>
+<button class="comprar">Comprar</button>
+</div>
+<h3>Espinilleras Nike</h3>
+<img src="Img/Espinilleras negras Nike.webp" width="400" height="260">
+<p class="precio">$450.00</p>
+<button class="comprar">Comprar</button>
+</div>
+<h3>Espinilleras Pumas</h3>
+<img src="Img/Espinilleras pumas.webp" width="400" height="260">
+<p class="precio">$300.00</p>
+<button class="comprar">Comprar</button>
+</div>
+
+
+
+
+<script>
+    const trailersData = [
+      { id: 1, nombre: "Kenworth t680 next gen", precio: 4250000, imagen: "Trailer 1.jpg" },
+      { id: 2, nombre: "Kenworth t800", precio: 2700000, imagen: "Trailer 2.jpg" }, 
+      { id: 3, nombre: "Kenworth t660", precio: 1850000, imagen: "Trailer 3.jpg" },
+      { id: 4, nombre: "Kenworth t600", precio: 767000, imagen: "Trailer 4.jpg" },
+      { id: 5, nombre: "Kenworth w900", precio: 1900000, imagen: "Trailer 5.jpg" },
+      { id: 6, nombre: "Kenworth t680", precio: 1890000, imagen: "Trailer 6.jpg" },
+      { id: 7, nombre: "Freightliner cascadia", precio: 1700000, imagen: "Trailer 7.jpg" },
+      { id: 8, nombre: "Freightliner ", precio: 985000, imagen: "Trailer 8.jpg" },
+      { id: 9, nombre: "Kenworth K100", precio: 780000, imagen: "Trailer 9.jpg" },
+      { id: 10, nombre: "Mack", precio: 2500000, imagen: "Trailer 10.jpg" }
+    ];
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+    function saveCart() {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    function renderTrailers() {
+      const container = document.getElementById("trailers");
+      container.innerHTML = "";
+      trailersData.forEach(trailer => {
+        const count = cart[trailer.id] || 0;
+        const div = document.createElement("div");
+        div.className = "trailer";
+        div.innerHTML = `
+          <img src="${trailer.imagen || 'https://via.placeholder.com/150'}" alt="${trailer.nombre}" />
+          <div class="info">
+            <h3>${trailer.nombre}</h3>
+            <p>Precio: $${trailer.precio.toLocaleString()}</p>
+          </div>
+          <div class="controls">
+            <button onclick="removeTrailer(${trailer.id})">-</button>
+            <span>${count}</span>
+            <button onclick="addTrailer(${trailer.id})">+</button>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+      updateTotal();
+    }
+
+    function addTrailer(id) {
+      cart[id] = (cart[id] || 0) + 1;
+      saveCart();
+      renderTrailers();
+    }
+
+    function removeTrailer(id) {
+      if (cart[id]) {
+        cart[id]--;
+        if (cart[id] <= 0) delete cart[id];
+        saveCart();
+        renderTrailers();
+      }
+    }
+
+    function updateTotal() {
+      let total = 0;
+      for (const id in cart) {
+        const trailer = trailersData.find(t => t.id == id);
+        if (trailer) {
+          total += trailer.precio * cart[id];
+        }
+      }
+      document.getElementById("total").textContent = total.toLocaleString();
+    }
+
+    
+    renderTrailers();
+  </script>
+
+
